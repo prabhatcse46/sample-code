@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="./app.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+		header{
+			    background: #2ab27b;
+    color: #fff;
+    float: left;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+		}
+		.logo{
+			background: url(../../images/logo.png) no-repeat;
+    width: 500px;
+    height: 43px;
+    float: left;
+   
+    margin: 9px 20px 0px 0px;
+		}
+		.menu-list{
+			float: left;
+			color: #9fdcc3;
+
+    margin: 17px 0 0;
+		}
+		.menu-list li{
+			margin: 0 15px; 
+		}
+		.active.btn-link-c{  background: #2ab27b;
+    border: 1px solid #2ab27b;
+    color: #fff;}
+		.Certificate{
+			
+    background: url(./images/certificates.png) no-repeat center center/cover;
+    height: 663px;
+    width: 100%;
+}
+.form-control{
+	  
+        border-radius: 0px;
+    height: 42px;
+    border: 1px solid #e0e0e0;
+    box-shadow: none;
+}
+#studentName{	position: absolute;
+    left: 11px;
+    right: 0px;
+    top: 137px;
+    font-size: 35px;
+    text-align: center;	}	
+    .btn-link-c{
+    	border: 1px solid #ccc;
+    padding: 13px 26px;
+    color: #ccc;
+    border-radius: 22px;
+    margin: 8px 3px;
+    font-size: 13px;
+    }		
+	</style>
+</head>
+<body>
+<header>
+<div class="container" > <div class="logo"></div>
+	<div class="menu-list">
+	<ul class="list-inline">
+		<li>Dashboard</li>
+		<li>Certificates</li>
+		<li>Lists</li>
+	</ul> 
+	</div> </div>
+	
+
+</header>
+ <br>
+  <h1>Issuer</h1>
+  <br><label for="amount">Certificate Address:</label><span id="certificateAddress"></span>
+  <br><label for="receiver">Issuer's Address:</label><span id="issuersAddress"></span>
+  <br><label for="receiver">Approver's Address:</label><span id="approverAddress"></span>
+  <br><br>
+  <br><br>
+  <span id="status"></span>
+  <br>
+  <div class="col-md-4 form-group" >
+    <br><label for="receiver">Approver's Name:</label><span id="approverName"></span>
+    <br><label for="receiver">Approver's Email:</label><span id="approverEmail"></span>
+    <br><label for="receiver">Approver's Designation:</label><span id="approverDesignation"></span>
+    <br><label for="receiver">Approver's Company:</label><span id="approverCompany"></span>
+  </div>
+  <div class="col-md-4 form-group" >
+    <br><label for="receiver">Issuer's Name:</label><span id="issuerName"></span>
+    <br><label for="receiver">Issuer's Email:</label><span id="issuerEmail"></span>
+    <br><label for="receiver">Issuer's Designation:</label><span id="issuerDesignation"></span>
+    <br><label for="receiver">Issuer's Company:</label><span id="issuerCompany"></span>
+  </div>
+  <div class="col-md-4 form-group" >
+      <br><label for="receiver">Certificat Is Expired:</label><span id="certificatIsExpired"></span>
+      <br><label for="receiver">Create Date:</label><span id="createDate"></span>
+      <br><label for="receiver">Approve Date: </label><span id="approveDate"></span>
+      
+    </div>
+  
+<div class="container" style="margin-top: 10px">
+	<div class="row">
+		<div class="col-md"> 
+<div class="col-md-12"><h2>Issue Certificate</h2><span id="balance"></span>
+		<h4 style=" margin-bottom: 30px;">UttaraKhand Univercity</h4> </div>
+
+		<form>
+			<div class="col-md-12 form-group">
+			<label>Issuer Address</label>
+				<input class="form-control" id="_issuerAddress" type="text" name=""/>
+      </div>
+      <div class="col-md-12 form-group">
+			<label>Receiver's _name</label>
+				<input class="form-control" id="_name" type="text" name="">
+
+
+      </div>
+      <div class="col-md-12 form-group">
+			<label>Receiver's _designation</label>
+				<input class="form-control" id="_designation" type="text" name="">
+
+
+      </div>
+            <div class="col-md-12 form-group">
+			<label>Receiver's _logo</label>
+				<input class="form-control" id="_logo" type="text" name="">
+
+
+      </div>
+            <div class="col-md-12 form-group">
+			<label>Receiver's _email</label>
+				<input class="form-control" id="_email" type="text" name="">
+
+
+      </div>
+              <div class="col-md-12 form-group">
+			<label>Receiver's _company</label>
+				<input class="form-control" id="_company" type="text" name="">
+
+
+			</div>
+				<span id="status"></span>
+
+	
+		</form>
+
+		<div class="row">
+				<div class="col-md button-wrapper" style="    margin: 152px 0 0 11px;">
+			<ul class="list-inline">
+				<li>
+						<a href="#" class="btn-link-c">Send Test</a>
+				</li>
+				<li>
+					<a href="#" class="btn-link-c">Cancel</a>
+				</li>
+        
+        <li><a href="javascript: void App.setIssuer();" class="btn-link-c active">Set Issuer</a></li>
+        <li><a href="javascript: void App.getIssuer();" class="btn-link-c active">Get Issuer</a></li>
+        <li><a href="javascript: void App.getApprover();" class="btn-link-c active">Get Approver</a></li>
+        <li> <a href="javascript: void App.sign();" class="btn-link-c active">Sign</a>  	</li>
+        <li> <a href="javascript: void App.setApprover();" class="btn-link-c active">Set Approver</a>	</li>
+        <li> <a href="javascript: void App.DeployContract();" class="btn-link-c active">Create Certificate</a></li>
+
+			</ul>
+			
+			</div>
+		</div>
+		</div>
+		<div class="col-md"> 
+		<div class="Certificate">
+			<span id="studentName">Receiver's Name</span>
+
+		</div>
+
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	
+$(function(){
+	$
+	$("#studentNameInp").keyup(function(){
+		if($(this).val().length > 0 ){
+			$("#studentName").text($(this).val())
+		}else{
+			$("#studentName").text("Receiver's Name")
+		}
+		
+	})
+})
+
+</script>
+</body>
+</html>
